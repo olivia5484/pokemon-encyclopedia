@@ -35,4 +35,11 @@ with open('pokemon encyclopedia.txt', 'w') as pokemon_file:
             pokemon_abilities.append(ability_data['ability']['name'])
 
         print(f"Abilities: {', '.join(pokemon_abilities)}", file=pokemon_file)
-        print()
+
+
+        pokemon_moves = []
+        for move_data in pokemon_data['moves'] [:10]:
+            pokemon_moves.append(move_data['move']['name'])
+
+        print(f"Some moves: {', '.join(pokemon_moves)}", file=pokemon_file)
+        print(file=pokemon_file)
